@@ -1,8 +1,11 @@
-
-.card { 
+.card {
   margin-bottom: 30px;
 }
 
 .card-footer {
   padding: 0;
+}
+
+button:hover {
+  cursor: pointer
 }

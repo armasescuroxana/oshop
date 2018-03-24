@@ -30,7 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
-import { ShopingCartService } from './shoping-cart.service';
+import { ShoppingCartService } from './shopping-cart.service';
 
 @NgModule({
   declarations: [
@@ -97,7 +97,7 @@ import { ShopingCartService } from './shoping-cart.service';
     UserService,
     CategoryService,
     ProductService,
-    ShopingCartService
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
