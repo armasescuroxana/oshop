@@ -9,7 +9,7 @@ import 'rxjs/add/operator/switchMap';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent  {
+export class ProductsComponent {
   products: Product[] = [];
   filteredProducts: Product[] = [];
   category: string;
@@ -20,15 +20,15 @@ export class ProductsComponent  {
   ) {
     productService
       .getAll()
-      .switchMap(products => {
+      .switchMap((products: Product[]) => {
         this.products = products;
         return route.queryParamMap;
       })
       .subscribe(params => {
         this.category = params.get('category');
-        
-        this.filteredProducts = (this.category) ? 
-          this.products.filter(p => p.category === this.category) : 
+
+        this.filteredProducts = (this.category) ?
+          this.products.filter(p => p.category === this.category) :
           this.products;
       });
   }
